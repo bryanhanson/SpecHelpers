@@ -1,0 +1,7 @@
+NEWS file for package SpecHelpers
+Utility functions for spectroscopy.  1. Functions to simulate spectra for use in teaching or testing.  2.  Functions to process files created by LoggerPro and SpectraSuite software.  
+Bryan A. Hanson DePauw University, Greencastle Indiana USA
+URL: github.com/bryanhanson/SpecHelpers
+
+Changes in version 0.1-0 2015-04-04
+     + Package created from selected functions in HandyStuff.
