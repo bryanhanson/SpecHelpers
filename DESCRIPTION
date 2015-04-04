@@ -1,7 +1,7 @@
 Package: SpecHelpers
 Type: Package
 Title: Spectroscopy Related Uilities
-Version: 0.1-0
+Version: 0.1-1
 Date: 2015-04-04
 Author: Bryan A. Hanson DePauw University, Greencastle Indiana USA
 Maintainer: Bryan A. Hanson <hanson@depauw.edu>
