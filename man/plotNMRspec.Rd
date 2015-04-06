@@ -5,7 +5,7 @@
 \title{Create and Plot an NMR Spectrum}
 \usage{
 plotNMRspec(peaks, x.range = c(12, 0), MHz = 300, ppHz = 1,
-  nuclei = "1H", pkLabs = TRUE, lab.pos = NULL, ...)
+  nuclei = "1H", pkLabs = TRUE, lab.pos = NULL, plot = TRUE, ...)
 }
 \arguments{
 \item{peaks}{A data frame with the following columns: delta, mult
@@ -40,6 +40,8 @@ is drawn next to the peak.  If \code{FALSE}, no labels are drawn.}
 now) where 2 = left and 4 = right.  This adjusts the positions of the labels
 to be either left or right of the peak as a way to avoid overlaps.  The
 order must correspond to the order in \code{peaks}.}
+
+\item{plot}{Logical: Shall a plot be made?}
 
 \item{\dots}{Other parameters to be passed downstream.}
 }

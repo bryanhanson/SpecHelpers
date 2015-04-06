@@ -10,8 +10,11 @@
 #' (multiplicity), J, area, pw.  Multiplicity should be given by a number, so
 #' use 2 for a doublet.  J is in Hz (use 0 for singlets).  pw is the peak width
 #' at half-height in Hz.
+#'
 #' @param x.range A numeric vector of length 2 giving the ppm range desired.
+#'
 #' @param MHz Integer.  The operating frequency of the instrument, in MHz.
+#'
 #' @param ppHz Points per Hz: The number of data points per Hz to use in
 #' calculating the spectrum (passed as argument \code{dd} to \code{makeSpec}).
 #' The default (1) works well for 1H NMR spectra.  For 13C NMR spectra, where
@@ -23,22 +26,33 @@
 #' \code{ppHz}.  Thus the total data points used is \code{ppHz * Mhz *
 #' abs(diff(x.range))}.  This approach ensures that peaks are not distorted
 #' when changing \code{x.range} for the same \code{peak.list}.
+#'
 #' @param nuclei Character.  One of \code{c("1H", "13C")}. Controls the spacing
 #' of the tick marks and labeling of the peaks.
+#'
 #' @param pkLabs Logical.  If \code{TRUE}, and \code{nuclei = 1H}, the integral
 #' is drawn next to the peak.  If \code{FALSE}, no labels are drawn.
+#'
 #' @param lab.pos A vector of label positions as along as the number of rows in
 #' \code{peaks} (the number of peaks in the spectrum).  A numeric vector (for
 #' now) where 2 = left and 4 = right.  This adjusts the positions of the labels
 #' to be either left or right of the peak as a way to avoid overlaps.  The
 #' order must correspond to the order in \code{peaks}.
+#'
+#' @param plot Logical: Shall a plot be made?
+#'
 #' @param \dots Other parameters to be passed downstream.
+#'
 #' @return Returns a data frame of the type produced by \code{\link{makeSpec}}.
 #' See there for details.  x values are in Hz.
+#'
 #' @note Adding capacity for dd etc. may not be that hard, except that the
 #' input data frame will have to change a fair amount.
+#'
 #' @author Bryan A. Hanson, DePauw University. \email{hanson@@depauw.edu}
+#'
 #' @seealso \code{\link{lorentzCurve}}, \code{\link{makeSpec}}
+#'
 #' @keywords utilities
 #' @export
 #' @examples
@@ -91,7 +105,8 @@
 #' 
 plotNMRspec <-
 function(peaks, x.range = c(12, 0), MHz = 300, ppHz = 1,
-	nuclei = "1H", pkLabs = TRUE, lab.pos = NULL, ...) {
+	nuclei = "1H", pkLabs = TRUE, lab.pos = NULL,
+	plot = TRUE, ...) {
 	
 	# Function to draw a theoretical 1H NMR spectrum
 	# Simple, 1st order coupling only
@@ -169,21 +184,31 @@ function(peaks, x.range = c(12, 0), MHz = 300, ppHz = 1,
 
 	# Now do the plotting
 	
-	if (!pkLabs) y.lim <- range(spec[-c(1,2),])
-	if (pkLabs) y.lim <- c(0, max(y.pos)*1.1) # Increase ylim a bit so integral labels are not cut off
-		
-	plot(x = spec[1,]/MHz, y = spec[2,],
-		type = "l", xlim = x.range, xlab = "chemical shift, ppm",
-		ylab = "", axes = FALSE, ylim = y.lim, ...)
-		
-	if (nuclei == "1H") axis(side = 1, at = seq(0, 15, by = 0.25))
-	if (nuclei == "13C") axis(side = 1, at = seq(0, 200, by = 10))
-		
-	if (pkLabs) { # Now that the plotting window is open add the labels
-		lp = 2
-		if (!is.null(lab.pos)) lp <- lab.pos # need to add translation of L, R to 2, 4
-		text(x = p$delta, y = y.pos, labels = labs, col = "red", pos = lp, offset = 0.5)
-		}
+	if (plot) {
+		if (!pkLabs) y.lim <- range(spec[-c(1,2),])
+		if (pkLabs) y.lim <- c(0, max(y.pos)*1.1) # Increase ylim a bit so integral labels are not cut off
+			
+		plot(x = spec[1,]/MHz, y = spec[2,],
+			type = "l", xlim = x.range, xlab = "chemical shift, ppm",
+			ylab = "", axes = FALSE, ylim = y.lim, ...)
+			
+		if (nuclei == "1H") {
+			# lbl <- rep(NA_real_, 76)
+			# lbl[which(1:76 %% 5 == 1L)] <- round(0:15, 1)
+			axis(side = 1, at = seq(0, 15, by = 0.2), tcl = -0.25, labels = FALSE)
+			axis(side = 1, at = 0:15)
+			}
+			
+		if (nuclei == "13C") {
+			axis(side = 1, at = seq(0, 200, by = 10), tcl = -0.25, labels = FALSE)
+			axis(side = 1, at = seq(0, 200, by = 20))
+			}
+		if (pkLabs) { # Now that the plotting window is open add the labels
+			lp = 2
+			if (!is.null(lab.pos)) lp <- lab.pos # need to add translation of L, R to 2, 4
+			text(x = p$delta, y = y.pos, labels = labs, col = "red", pos = lp, offset = 0.5)
+			}
+	}
 		
 	return(spec)
 	}

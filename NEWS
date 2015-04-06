@@ -3,7 +3,13 @@ Utility functions for spectroscopy.  1. Functions to simulate spectra for use in
 Bryan A. Hanson DePauw University, Greencastle Indiana USA
 URL: github.com/bryanhanson/SpecHelpers
 
-Changes in version 0.1-0 2015-04-04
-     + Package created from selected functions in HandyStuff.
+Changes in version 0.1-2 2015-04-05
+     + plotNMRspec gains a plot argument so that plot2DNMRspec can suppress it.
+     + plotNMRspec axis labeling improved.
+
 Changes in version 0.1-1 2015-04-04
      + Updated README
+     + Added preliminary version of plot2DNMRspec.
+
+Changes in version 0.1-0 2015-04-04
+     + Package created from selected functions in HandyStuff.
