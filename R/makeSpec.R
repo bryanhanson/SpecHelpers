@@ -4,7 +4,7 @@
 #' parameters describing the peaks.  The individual curves are computed using
 #' the mathematical definition of either a Gaussian curve, possibly with
 #' tailing, or a Lorentzian curve.  Gaussian curves are appropriate for
-#' simulating chromatograms or UV-Vis spectra, while Lorentzians are generally
+#' simulating chromatograms or UV-Vis spectra, while Lorentzians are
 #' used for simulating NMR peaks.  The function computes the individual curves
 #' as well as their sum (which is the whole chromatogram or spectrum).  A plot
 #' can be made, which may display the separate underlying curves.  If you want
@@ -22,37 +22,47 @@
 #' For a Lorentzian curve, a data frame with the following columns: x0, area,
 #' gamma.  x0 is the center frequency or chemical shift.  gamma is the half the
 #' peak width at half-height.  area is the area under the peak.
+#'
 #' @param x.range A numeric vector of length 2 giving the retention time range
 #' (or frequency range) desired.  Must make sense in light of the peak list
 #' given (i.e. a wider range, possibly much wider depending up the values of
 #' \code{sd} and \code{tail}), as these broaden the peaks.
+#'
 #' @param plot Logical; if TRUE, a plot is produced.
+#'
 #' @param curves Logical; if TRUE, the individual curves are plotted (provided
 #' \code{plot = TRUE}.  Not very useful for NMR spectra, but great for showing,
 #' for instance, how shoulders arise on peaks in a chromatogram.
+#'
 #' @param type A character string.  Use "gauss" to generate Gaussian curves
 #' (for chromatograms, or UV-Vis spectra).  Use "lorentz" to generate
 #' Lorentzian curves as found in NMR spectra.
+#'
 #' @param noise A number giving the amount of noise to be added to the
 #' individual curves (the net spectrum has the noise from the individual
 #' spectra, it has no additional noise added to it).  Value corresponds to the
 #' argument \code{factor} in function \code{jitter}.
+#'
 #' @param dd The density of data points per unit of \code{x.range}.  The total
 #' number of data points used to create the spectrum or chromatogram is
 #' \code{dd*abs(diff(x.range))} and thus it also depends on the units of
 #' \code{x.range}.  This approach ensures that peaks are not distorted when
 #' changing \code{x.range} for the same \code{peak.list}.
+#'
 #' @param \dots Additional arguments to be passed downstream.
-#' @return A data frame containing the x values (retention times or
+#'
+#' @return A matrix containing the x values (retention times or
 #' frequencies) in the first row, and the complete chromatogram (spectrum) in
 #' the second row.  Additional rows contain chromatograms (spectra) of the
 #' individual components.  The row names of the data frame are character
-#' strings describing the chromatogram (spectrum) in that row.  The data frame
-#' contains 1,000 columns, as \code{xrange} is divided into 1,000 parts for
-#' computation of the corresponding y values.
+#' strings describing the chromatogram (spectrum) in that row.  The matrix
+#' contains \code{dd*abs(diff(x.range))} columns.
+#'
 #' @author Bryan A. Hanson, DePauw University. \email{hanson@@depauw.edu}
+#'
 #' @seealso \code{\link{gaussCurve}}, \code{\link{lorentzCurve}},
-#' \code{\link{plotNMRspec}} the preferred interface for drawing NMR spectra.
+#' \code{\link{plotNMRspec}} and \code{\link{plot2DNMRspec}}, the preferred
+#' interfaces for drawing NMR spectra.
 #' @keywords utilities
 #' @export
 #' @examples

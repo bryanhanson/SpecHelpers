@@ -1,8 +1,8 @@
 #' Utility Functions to Clean and Convert Spectral Files to csv
 #' 
 #' These functions clean out extraneous information from exported spectral data
-#' files and then write them out in csv format.  The first two functions handle
-#' files exported by LoggerPro software.  The third handles files exported by
+#' files and then write them out in csv format.  \code{txt2csv} and \code{cmbl2csv} handle
+#' files exported by LoggerPro software.  \code{sstab2csv} handles files exported by
 #' Spectra Suite software.  Not directly called by the user.
 #' 
 #' Extraneous text at the beginning of the file is removed.  In the case of
@@ -11,14 +11,20 @@
 #' wavelength and absorbances are reunited into two columns.
 #' 
 #' @aliases txt2csv cmbl2csv sstab2csv
+#'
 #' @param in.file The name of the input file.
+#'
 #' @param out.file The name of the output file.
+#'
 #' @return A modifed file in csv format.
+#'
 #' @author Bryan A. Hanson, DePauw University.
+#'
 #' @seealso \code{\link{gatherSpecFiles}} which is the function the user should
 #' call.
 #' @keywords utilities
 #' @export
+#' 
 txt2csv <-
 function(in.file = "", out.file = "") {
 	

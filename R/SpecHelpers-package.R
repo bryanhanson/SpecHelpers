@@ -1,6 +1,6 @@
 
 
-#' SpecHelpers: Spectroscopy related utilities
+#' SpecHelpers: Spectroscopy Related Utilities
 #' 
 #' Utility functions for spectroscopy.  1. Functions to simulate spectra for
 #' use in teaching or testing.  2.  Functions to process files created by

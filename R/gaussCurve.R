@@ -2,21 +2,27 @@
 #' 
 #' Computes the y values describing a Gaussian distribution given a range of x
 #' values and parameters for mu, sigma, and area.  A tail may be introduced
-#' into the curve to simulate the behavior of some chromatography peaks.  Not
-#' really intended for the end user, but no reason not to use it either.
-#' 
+#' into the curve to simulate the behavior of some chromatography peaks.
 #' 
 #' @param x A vector of x values which will be used to compute the
 #' corresponding y values.  Use enough to give good resolution.
+#'
 #' @param area The area of the peak, in arbitrary units.
+#'
 #' @param mu The position of the peak.  Must fall in the range of x, of course.
+#'
 #' @param sigma The standard deviation of the peak.
+#'
 #' @param tail A value describing any tailing desired.  If NA, no tailing is
 #' applied.
+#'
 #' @return A vector of y values corresponding to the x values supplied.
+#'
 #' @author Bryan A. Hanson, DePauw University. \email{hanson@@depauw.edu}
+#'
 #' @seealso \code{\link{lorentzCurve}}, \code{\link{makeSpec}} which uses this
 #' function to make either spectra or chromatograms.
+#'
 #' @keywords utilities
 #' @export
 #' @examples

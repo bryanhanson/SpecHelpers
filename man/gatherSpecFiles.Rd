@@ -18,8 +18,8 @@ possible.}
 }
 \value{
 A data frame containing the wavelengths in the first column and the
-absorbances in the other columns, one column per file, with the file name
-generating the column name.
+absorbances in the other columns, one column per file, with column names
+generated from the file names.
 }
 \description{
 This function will go through all the files of a specified format in a

@@ -4,7 +4,7 @@
 \name{SpecHelpers-package}
 \alias{SpecHelpers}
 \alias{SpecHelpers-package}
-\title{SpecHelpers: Spectroscopy related utilities}
+\title{SpecHelpers: Spectroscopy Related Utilities}
 \description{
 Utility functions for spectroscopy.  1. Functions to simulate spectra for
 use in teaching or testing.  2.  Functions to process files created by

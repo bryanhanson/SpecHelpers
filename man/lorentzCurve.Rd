@@ -23,8 +23,7 @@ A vector of y values corresponding to the x values supplied.
 \description{
 Computes the y values describing a Lorentzian curve such as seen in an NMR
 peak. Requires a range of x values and parameters for peak position, area,
-and gamma, half the peak width at half-height.  Not really intended for the
-end user, but no reason not to use it either.
+and gamma (half the peak width at half-height).
 }
 \examples{
 myx <- seq(0, 100, length.out = 1000) # use lots of point for resolution
@@ -40,8 +39,8 @@ Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
 }
 \seealso{
 \code{\link{gaussCurve}}, \code{\link{makeSpec}},
-\code{\link{plotNMRspec}} which uses this function to draw simple NMR
-spectra.
+\code{\link{plotNMRspec}}
+and \code{\link{plot2DNMRspec}} for drawing NMR spectra.
 }
 \keyword{distributions}
 \keyword{utilities}

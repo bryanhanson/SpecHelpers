@@ -5,7 +5,7 @@
 
 
 
-#' Special Sequences for Drawing NMR Peaks
+#' Utility for Creating NMR Multiplets
 #' 
 #' This function creates sequences, centered on zero, which correspond to odd
 #' or even NMR multiplets.  Not intended for direct use. Called by
@@ -13,9 +13,12 @@
 #' 
 #' 
 #' @param length.out An integer giving the number of peaks in the sequence.
+#'
 #' @return A vector describing the spacing of the parts of an NMR multiplet in
 #' terms of multiples of the coupling constant, J.
+#'
 #' @author Bryan A. Hanson, DePauw University. \email{hanson@@depauw.edu}
+#'
 #' @seealso \code{\link{plotNMRspec}} which calls this function.
 #' @keywords utilities
 #' @export

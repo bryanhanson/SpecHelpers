@@ -14,7 +14,7 @@ generating the column name.  The data frame is written out in a file called
 }
 \description{
 This function processes csv files containing two columns, wavelength and
-absorbance, into a data frame, which is then written out as a csv file.  The
+absorbance (or intensity etc), into a data frame, which is then written out as a csv file.  The
 files should have no header row.
 }
 \details{

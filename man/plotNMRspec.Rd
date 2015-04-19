@@ -36,8 +36,8 @@ of the tick marks and labeling of the peaks.}
 is drawn next to the peak.  If \code{FALSE}, no labels are drawn.}
 
 \item{lab.pos}{A vector of label positions as along as the number of rows in
-\code{peaks} (the number of peaks in the spectrum).  A numeric vector (for
-now) where 2 = left and 4 = right.  This adjusts the positions of the labels
+\code{peaks} (the number of peaks in the spectrum).  A numeric vector
+where 2 = left and 4 = right.  This adjusts the positions of the labels
 to be either left or right of the peak as a way to avoid overlaps.  The
 order must correspond to the order in \code{peaks}.}
 
@@ -54,10 +54,6 @@ This function simulates simple NMR spectra.  Only 1st order coupling can be
 handled, and there is currently no capacity for doublet of doublets and
 other such peaks.  The field strength of the "instrument" is taken into
 account.
-}
-\note{
-Adding capacity for dd etc. may not be that hard, except that the
-input data frame will have to change a fair amount.
 }
 \examples{
 # A simulated 1H NMR spectrum
@@ -103,7 +99,7 @@ res <- plotNMRspec(peaks2, x.range = c(180, 0), MHz = 200,
 	pkLabs = FALSE, nuclei = "13C")
 #
 # Repeat the above with ppHz = 1; note the peaks heights are not quite right
-#
+#	 as there are not enough data points to define the peak properly.
 }
 \author{
 Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}

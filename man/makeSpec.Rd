@@ -48,20 +48,19 @@ changing \code{x.range} for the same \code{peak.list}.}
 \item{\dots}{Additional arguments to be passed downstream.}
 }
 \value{
-A data frame containing the x values (retention times or
+A matrix containing the x values (retention times or
 frequencies) in the first row, and the complete chromatogram (spectrum) in
 the second row.  Additional rows contain chromatograms (spectra) of the
 individual components.  The row names of the data frame are character
-strings describing the chromatogram (spectrum) in that row.  The data frame
-contains 1,000 columns, as \code{xrange} is divided into 1,000 parts for
-computation of the corresponding y values.
+strings describing the chromatogram (spectrum) in that row.  The matrix
+contains \code{dd*abs(diff(x.range))} columns.
 }
 \description{
 This function creates a chromatogram or spectrum from a list of appropriate
 parameters describing the peaks.  The individual curves are computed using
 the mathematical definition of either a Gaussian curve, possibly with
 tailing, or a Lorentzian curve.  Gaussian curves are appropriate for
-simulating chromatograms or UV-Vis spectra, while Lorentzians are generally
+simulating chromatograms or UV-Vis spectra, while Lorentzians are
 used for simulating NMR peaks.  The function computes the individual curves
 as well as their sum (which is the whole chromatogram or spectrum).  A plot
 can be made, which may display the separate underlying curves.  If you want
@@ -87,7 +86,8 @@ Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
 }
 \seealso{
 \code{\link{gaussCurve}}, \code{\link{lorentzCurve}},
-\code{\link{plotNMRspec}} the preferred interface for drawing NMR spectra.
+\code{\link{plotNMRspec}} and \code{\link{plot2DNMRspec}}, the preferred
+interfaces for drawing NMR spectra.
 }
 \keyword{utilities}
 

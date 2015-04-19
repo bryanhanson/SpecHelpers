@@ -16,7 +16,14 @@
 #' @param MHz Integer.  The operating frequency of the instrument, in MHz.
 #'
 #' @param ppHz Points per Hz: The number of data points per Hz to use in
-#' calculating the spectrum.  See \code{\link{makeSpec}} for details.
+#' calculating the spectrum (passed as argument \code{dd} to \code{makeSpec}).
+#' The default (1) works well for 1H NMR spectra.
+#' Note that this function uses Hz internally so that the \code{x.range}, which
+#' is in ppm, is multiplied by \code{Mhz} before being sent to
+#' \code{\link{makeSpec}}, and once there, \code{makeSpec} will multiply it by
+#' \code{ppHz}.  Thus the total data points used is \code{ppHz * Mhz *
+#' abs(diff(x.range))}.  This approach ensures that peaks are not distorted
+#' when changing \code{x.range} for the same \code{peak.list}.
 #'
 #' @param M An adjacency matrix indicating which peaks are coupled.
 #' The order of rows and columns must be the same as in \code{peaks}.

@@ -2,21 +2,27 @@
 #' 
 #' Computes the y values describing a Lorentzian curve such as seen in an NMR
 #' peak. Requires a range of x values and parameters for peak position, area,
-#' and gamma, half the peak width at half-height.  Not really intended for the
-#' end user, but no reason not to use it either.
+#' and gamma (half the peak width at half-height).
 #' 
 #' 
 #' @param x A vector of x values which will be used to compute the
 #' corresponding y values.  Use enough to give good resolution.
+#'
 #' @param x0 The position of the peak.  Must fall in the range of x, of course.
+#'
 #' @param area The area of the peak, in arbitrary units.
+#'
 #' @param gamma HWHM, half-width at half-maximum.  The peak "width" in units
 #' corresponding to x.
+#'
 #' @return A vector of y values corresponding to the x values supplied.
+#'
 #' @author Bryan A. Hanson, DePauw University. \email{hanson@@depauw.edu}
+#'
 #' @seealso \code{\link{gaussCurve}}, \code{\link{makeSpec}},
-#' \code{\link{plotNMRspec}} which uses this function to draw simple NMR
-#' spectra.
+#' \code{\link{plotNMRspec}}
+#' and \code{\link{plot2DNMRspec}} for drawing NMR spectra.
+#'
 #' @keywords utilities distributions
 #' @export
 #' @examples

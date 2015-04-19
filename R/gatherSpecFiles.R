@@ -18,16 +18,21 @@
 #' 
 #' @param type A character string giving the type of files to be processed.
 #' Currently, either "txt", "csv" or "cmbl" extensions can be processed.
+#'
 #' @param intLambda Logical.  If TRUE, non-integer wavelengths that round to
 #' the same value will be combined and averaged and reported as integer values.
+#'
 #' @param \dots Other parameters to be passed downstream.  Currently none
 #' possible.
+#' 
 #' @return A data frame containing the wavelengths in the first column and the
-#' absorbances in the other columns, one column per file, with the file name
-#' generating the column name.
+#' absorbances in the other columns, one column per file, with column names
+#' generated from the file names.
+#'
 #' @author Bryan A. Hanson, DePauw University
 #' @keywords utilities
 #' @export
+#'
 gatherSpecFiles <-
 function(type = "txt", intLambda = FALSE, ...) {
 

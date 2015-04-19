@@ -25,8 +25,7 @@ A vector of y values corresponding to the x values supplied.
 \description{
 Computes the y values describing a Gaussian distribution given a range of x
 values and parameters for mu, sigma, and area.  A tail may be introduced
-into the curve to simulate the behavior of some chromatography peaks.  Not
-really intended for the end user, but no reason not to use it either.
+into the curve to simulate the behavior of some chromatography peaks.
 }
 \examples{
 myx <- seq(0, 100, length.out = 1000) # use lots of point for resolution

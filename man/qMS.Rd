@@ -9,7 +9,8 @@ qMS(f = NULL, xlab = "m/z", ylab = "intensity", main = "Mass Spectrum",
 }
 \arguments{
 \item{f}{A character string giving the molecular formula of the molecule of
-interest.}
+interest.  Order of elements does not matter.  Elements should be given
+as their atomic symbols, eg. "Br" not "br".}
 
 \item{xlab}{A character string giving the x axis label.}
 
@@ -35,7 +36,6 @@ any quantities.
 }
 \examples{
 ms <- qMS(f = "C5H8BrCl")
-print(ms)
 }
 \author{
 Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}

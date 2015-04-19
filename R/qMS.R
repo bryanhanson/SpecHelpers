@@ -9,20 +9,26 @@
 #' any quantities.
 #' 
 #' @param f A character string giving the molecular formula of the molecule of
-#' interest.
+#' interest.  Order of elements does not matter.  Elements should be given
+#' as their atomic symbols, e.g. "Br" not "br".
+#'
 #' @param xlab A character string giving the x axis label.
+#'
 #' @param ylab A character string giving the y axis label.
+#'
 #' @param main A character string giving the title of the plot.
+#'
 #' @param \dots Additional arguments to be passed downstream.
+#'
 #' @return Draws a plot.  Returns a data frame giving the peak masses and
 #' relative intensites.
+#'
 #' @author Bryan A. Hanson, DePauw University. \email{hanson@@depauw.edu}
 #' @keywords utilities
 #' @export
 #' @examples
 #' 
 #' ms <- qMS(f = "C5H8BrCl")
-#' print(ms)
 #' 
 qMS <- function(f = NULL, xlab = "m/z",
 	ylab = "intensity", main = "Mass Spectrum", ...) {
@@ -84,10 +90,8 @@ qMS <- function(f = NULL, xlab = "m/z",
 	Mi <- round(Mi*100/max(Mi))
 	MS <- data.frame(mass = M, rel.int = Mi, row.names = rn)
 		
-	p <- ggplot2::qplot(x = M, y = Mi, data = MS, geom = "segment",
-		yend = 0, xend = M, size = I(1), ylab = ylab, xlab = xlab,
-		main = main, ...)
+	plot(MS$mass, MS$rel.int, type = "n", xlab = xlab, ylab = ylab, main = main, ...)
+	segments(x0 = MS$mass, y0 = 0, x1 = MS$mass, y1 = MS$rel.int, lwd = 4, ...)
 		
-	print(p)
 	return(MS)
 	}

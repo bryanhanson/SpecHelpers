@@ -34,8 +34,8 @@
 #' is drawn next to the peak.  If \code{FALSE}, no labels are drawn.
 #'
 #' @param lab.pos A vector of label positions as along as the number of rows in
-#' \code{peaks} (the number of peaks in the spectrum).  A numeric vector (for
-#' now) where 2 = left and 4 = right.  This adjusts the positions of the labels
+#' \code{peaks} (the number of peaks in the spectrum).  A numeric vector
+#' where 2 = left and 4 = right.  This adjusts the positions of the labels
 #' to be either left or right of the peak as a way to avoid overlaps.  The
 #' order must correspond to the order in \code{peaks}.
 #'
@@ -46,8 +46,6 @@
 #' @return Returns a data frame of the type produced by \code{\link{makeSpec}}.
 #' See there for details.  x values are in Hz.
 #'
-#' @note Adding capacity for dd etc. may not be that hard, except that the
-#' input data frame will have to change a fair amount.
 #'
 #' @author Bryan A. Hanson, DePauw University. \email{hanson@@depauw.edu}
 #'
@@ -100,7 +98,7 @@
 #' 	pkLabs = FALSE, nuclei = "13C")
 #' #
 #' # Repeat the above with ppHz = 1; note the peaks heights are not quite right
-#' #	
+#' #	 as there are not enough data points to define the peak properly.
 #' 
 #' 
 plotNMRspec <-

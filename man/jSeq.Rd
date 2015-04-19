@@ -2,7 +2,7 @@
 % Please edit documentation in R/jSeq.R
 \name{jSeq}
 \alias{jSeq}
-\title{Special Sequences for Drawing NMR Peaks}
+\title{Utility for Creating NMR Multiplets}
 \usage{
 jSeq(length.out)
 }

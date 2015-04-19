@@ -9,6 +9,7 @@
 #' 
 #' 
 #' @return The original files are overwritten with the modified files.
+#'
 #' @author Bryan A. Hanson, DePauw University
 #' @seealso \code{\link{gatherSpecFiles}} which is the function the user should
 #' call.
