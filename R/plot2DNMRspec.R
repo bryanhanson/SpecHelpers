@@ -1,7 +1,7 @@
 #' Draw a 2D NMR Spectrum
 #' 
 #' This function simulates 2D NMR spectra.  Only 1st order coupling can be
-#' handled, and there is currently no capacity for doublet of doublets and
+#' handled -- there is currently no capacity for doublet of doublets and
 #' other such peaks.  The field strength of the "instrument" is taken into
 #' account.
 #' 
@@ -41,8 +41,12 @@
 #' @keywords utilities
 #' @export
 #' @examples
-#' # ethyl 2-ethyl-3-oxobutyrate
+#'
+#' ### ethyl 2-ethyl-3-oxobutyrate
+#' ### Set up data
+#'
 #' peaks1 <- data.frame(
+#' #             A     B     C     D     E     F
 #' 	delta = c(4.20, 3.34, 2.23, 1.88, 1.28, 0.94),
 #' 	mult = c(4, 3, 1, 5, 3, 3),
 #' 	J = c(14, 14, 0, 14, 14, 14),
@@ -58,10 +62,26 @@
 #'                0, 0, 0, 1, 0, 0), # F
 #' 			   ncol = 6)
 #' 
-#' res <- plot2DNMRspec(peaks = peaks1, x.range = c(0, 5), MHz = 500, ppHz = 1, M = AM)
+#' ### 1D 1H NMR plot for reference
+#' # CRAN checks will skip some examples to save time
+#'
+#'
+#' jnk <- plotNMRspec(peaks = peaks1, x.range = c(0, 5), MHz = 500,
+#' main = "1H NMR of ethyl 2-ethyl-3-oxobutyrate")
+#'
+#' ### 2D COSY plot
+#'
+#' res <- plot2DNMRspec(peaks = peaks1, x.range = c(0, 5), MHz = 500, ppHz = 1, M = AM,
+#' main = "COSY of ethyl 2-ethyl-3-oxobutyrate")
+#'
+#' ### 2D TOCSY plot
+#'
+#' \dontrun{
+#'
 #' res <- plot2DNMRspec(peaks = peaks1, x.range = c(0, 5), MHz = 500, ppHz = 1,
-#' levels = c(0.85, 0.9, 0.95), type = "TOCSY")
-
+#' levels = c(0.85, 0.9, 0.95), type = "TOCSY",
+#' main = "TOCSY of ethyl 2-ethyl-3-oxobutyrate")
+#' }
 plot2DNMRspec <- function (peaks, x.range = c(0, 12), MHz = 300, ppHz = 1,
 	type = "COSY", M = NULL, levels = seq(0.5, 1.0, by = 0.1),
 	...) {

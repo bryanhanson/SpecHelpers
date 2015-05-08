@@ -1,0 +1,16 @@
+
+# CITATION file
+
+citHeader("To cite package 'SpecHelpers' in publications use:")
+
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
+vers <- paste("R package version", meta$Version)
+web <- "github.com/bryanhanson/SpecHelpers"
+
+citEntry(entry = "Manual",
+	title = "SpecHelpers: Spectroscopy Related Utilities",
+	author = personList(as.person("Bryan A. Hanson")),
+	year = year,
+	note = vers,
+	url = web,
+	textVersion = paste("Bryan A. Hanson (", year, ") SpecHelpers: Spectroscopy Related Utilities ", vers, ", ", web, sep = ""))

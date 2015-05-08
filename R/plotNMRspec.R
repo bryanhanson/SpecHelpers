@@ -1,7 +1,7 @@
 #' Create and Plot an NMR Spectrum
 #' 
 #' This function simulates simple NMR spectra.  Only 1st order coupling can be
-#' handled, and there is currently no capacity for doublet of doublets and
+#' handled -- there is currently no capacity for doublet of doublets and
 #' other such peaks.  The field strength of the "instrument" is taken into
 #' account.
 #' 
@@ -55,51 +55,54 @@
 #' @export
 #' @examples
 #' 
-#' # A simulated 1H NMR spectrum
+#' ### A simulated 1H NMR spectrum
+#'
 #' peaks1 <- data.frame(
 #' 	delta = c(1.3, 3.75, 3.9, 10.2),
 #' 	mult = c(3, 4, 2, 1),
 #' 	J = c(14, 14, 14, 0),
 #' 	area = c(3, 2, 1, 1),
 #' 	pw = c(2, 2, 2, 10))
-#' #	
+#' 
 #' res <- plotNMRspec(peaks1, x.range = c(12, 0), MHz = 500,
 #' 	main = "500 MHz Simulated 1H NMR Spectrum")
-#' #
-#' # Compare to the same data at 200 MHz and plot together:
+#'
+#' ### Compare to the same data at 200 MHz and plot together
+#'
 #' par(mfrow = c(2,1))
 #' res <- plotNMRspec(peaks1, x.range = c(12, 0), MHz = 500,
 #' 	main = "500 MHz Simulated 1H NMR Spectrum")
 #' res <- plotNMRspec(peaks1, x.range = c(12, 0), MHz = 200,
 #' 	main = "200 MHz Simulated 1H NMR Spectrum")
 #' par(mfrow = c(1,1))
-#' #
-#' # Zoom in to show off:
+#'
+#' ### Zoom in to show off
+#'
 #' par(mfrow = c(2,1))
 #' res <- plotNMRspec(peaks1, x.range = c(4.5, 1), MHz = 500,
 #' 	main = "500 MHz Simulated 1H NMR Spectrum")
 #' res <- plotNMRspec(peaks1, x.range = c(4.5, 1), MHz = 200,
 #' 	main = "200 MHz Simulated 1H NMR Spectrum")
 #' par(mfrow = c(1,1))
-#' #
-#' # A simulated 13C NMR spectrum
-#' # These are substantially slower due to the large
+#' 
+#' ### A simulated 13C NMR spectrum
+#'
+#' # This is substantially slower due to the large
 #' # chemical shift range
-#' #
+#' 
 #' peaks2 <- data.frame(
 #' 	delta = c(160, 155, 145, 143, 135, 60, 32),
 #' 	mult = rep(1, 7),
 #' 	J = rep(1, 7),
 #' 	area = c(0.1, 0.3, 0.3, 1, 1, 0.5, 0.5),
 #' 	pw = rep(1, 7))
-#' #
+#' 
 #' res <- plotNMRspec(peaks2, x.range = c(180, 0), MHz = 200,
 #' 	main = "200 MHz Simulated 13C NMR Spectrum", ppHz = 4,
 #' 	pkLabs = FALSE, nuclei = "13C")
-#' #
-#' # Repeat the above with ppHz = 1; note the peaks heights are not quite right
-#' #	 as there are not enough data points to define the peak properly.
 #' 
+#' # Try repeating the above with ppHz = 1; note the peaks heights are not quite right
+#' # as there are not enough data points to define the peak properly.
 #' 
 plotNMRspec <-
 function(peaks, x.range = c(12, 0), MHz = 300, ppHz = 1,
@@ -121,7 +124,7 @@ function(peaks, x.range = c(12, 0), MHz = 300, ppHz = 1,
 	# Set up data to pass to makeSpec
 	
 	for (n in 1:nrow(p)) {
-		# Get binomical coefficients for each part of multiplet
+		# Get binomial coefficients for each part of multiplet
 		z <- p$mult[n] - 1
 		coef <- choose(z, 0:z) # a strange name for binomial!
 		
@@ -152,9 +155,21 @@ function(peaks, x.range = c(12, 0), MHz = 300, ppHz = 1,
 	# Labels are actually the hardest part!
 	
 	if (pkLabs) { # Figure out where the label will go...
-		spec2 <- data.frame(group = as.factor(gr), spec[-c(1,2),])
-		spec2 <- aggregate(.~group, data = spec2, FUN = "max")
-		y.pos <- apply(spec2[,-1], MARGIN = 1, FUN = max)
+		
+		# this code extremely slow - removed to speed up CRAN checks
+#		spec2 <- data.frame(group = as.factor(gr), spec[-c(1,2),])
+#		spec2 <- aggregate(.~group, data = spec2, FUN = "max")
+#		y.pos <- apply(spec2[,-1], MARGIN = 1, FUN = max)
+
+		spec2 <- spec[-c(1,2),]
+		grps <- as.factor(gr)
+
+		y.pos <- NA_real_
+		for (i in 1:length(levels(grps))) {
+			w <- which(grps == levels(grps)[i])
+			y.pos <- c(y.pos, max(spec2[w,]))
+			}
+		y.pos <- y.pos[-1]
 #		cat("y.pos original =", y.pos, "\n")
 		
 		# Next part adds an extra offset if labels are close together

@@ -1,7 +1,20 @@
 NEWS file for package SpecHelpers
-Utility functions for spectroscopy.  1. Functions to simulate spectra for use in teaching or testing.  2.  Functions to process files created by LoggerPro and SpectraSuite software.  
+
+Utility functions for spectroscopy.  1. Functions to simulate spectra for use in teaching or testing.  2.  Functions to process files created by 'LoggerPro' and 'SpectraSuite' software.
+
 Bryan A. Hanson DePauw University, Greencastle Indiana USA
 URL: github.com/bryanhanson/SpecHelpers
+
+Changes in version 0.1.6 2015-05-08
+     + Code tweaking to speed up examples for CRAN checks
+
+Changes in version 0.1.5 2015-05-07
+     + Small changes for CRAN (dontrun some examples)
+     + Added CITATION file.
+
+Changes in version 0.1.3 2015-05-07
+     + Improved plot2DNMRspec examples.
+     + Misc. improvements to Rd files.
 
 Changes in version 0.1-2 2015-04-17
      + Numerous tweeks to documentation.

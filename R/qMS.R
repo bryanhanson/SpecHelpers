@@ -28,7 +28,7 @@
 #' @export
 #' @examples
 #' 
-#' ms <- qMS(f = "C5H8BrCl")
+#' ms <- qMS(f = "C5H8BrCl", xlim = c(150, 200), main = "Parent Ion of C5H8BrCl")
 #' 
 qMS <- function(f = NULL, xlab = "m/z",
 	ylab = "intensity", main = "Mass Spectrum", ...) {

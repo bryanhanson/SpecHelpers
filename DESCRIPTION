@@ -1,11 +1,11 @@
 Package: SpecHelpers
 Type: Package
 Title: Spectroscopy Related Utilities
-Version: 0.1-3
-Date: 2015-04-17
+Version: 0.1.6
+Date: 2015-05-08
 Author: Bryan A. Hanson DePauw University, Greencastle Indiana USA
 Maintainer: Bryan A. Hanson <hanson@depauw.edu>
-Description: Utility functions for spectroscopy.  1. Functions to simulate spectra for use in teaching or testing.  2.  Functions to process files created by LoggerPro and SpectraSuite software.  
+Description: Utility functions for spectroscopy.  1. Functions to simulate spectra for use in teaching or testing.  2.  Functions to process files created by 'LoggerPro' and 'SpectraSuite' software.  
 License: GPL-3
 Imports: gsubfn
 URL: https://github.com/bryanhanson/SpecHelpers

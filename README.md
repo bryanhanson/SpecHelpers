@@ -1,6 +1,13 @@
 
 ## How to install SpecHelpers
 
+### To install from CRAN:
+
+````r
+install.packages("SpecHelpers")
+library("SpecHelpers")
+````
+
 ### To install from Github using R:
 
 ````r
