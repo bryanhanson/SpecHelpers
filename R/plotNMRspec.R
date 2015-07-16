@@ -53,6 +53,7 @@
 #'
 #' @keywords utilities
 #' @export
+#' @importFrom graphics plot axis text
 #' @examples
 #' 
 #' ### A simulated 1H NMR spectrum

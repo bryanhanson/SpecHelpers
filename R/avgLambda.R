@@ -15,6 +15,8 @@
 #' call.
 #' @keywords utilities
 #' @export
+#' @importFrom utils read.csv write.table
+#' @importFrom stats aggregate na.pass
 avgLambda <-
 function() {
 

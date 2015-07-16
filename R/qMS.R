@@ -26,6 +26,8 @@
 #' @author Bryan A. Hanson, DePauw University. \email{hanson@@depauw.edu}
 #' @keywords utilities
 #' @export
+#' @importFrom stats rbinom
+#' @importFrom graphics segments plot
 #' @examples
 #' 
 #' ms <- qMS(f = "C5H8BrCl", xlim = c(150, 200), main = "Parent Ion of C5H8BrCl")

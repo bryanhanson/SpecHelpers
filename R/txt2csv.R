@@ -23,6 +23,7 @@
 #' @seealso \code{\link{gatherSpecFiles}} which is the function the user should
 #' call.
 #' @keywords utilities
+#' @importFrom utils write.table read.table
 #' @export
 #' 
 txt2csv <-

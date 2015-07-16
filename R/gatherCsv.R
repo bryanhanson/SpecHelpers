@@ -19,7 +19,7 @@
 #' call.
 #' @keywords utilities
 #' @export
-#'
+#' @importFrom utils read.csv write.csv
 gatherCsv <-
 function() {
 

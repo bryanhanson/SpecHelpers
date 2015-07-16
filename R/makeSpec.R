@@ -65,6 +65,7 @@
 #' interfaces for drawing NMR spectra.
 #' @keywords utilities
 #' @export
+#' @importFrom graphics plot lines
 #' @examples
 #' 
 #' ### A simple chromatogram

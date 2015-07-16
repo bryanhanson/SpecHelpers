@@ -32,6 +32,7 @@
 #' @author Bryan A. Hanson, DePauw University
 #' @keywords utilities
 #' @export
+#' @importFrom utils read.csv
 #'
 gatherSpecFiles <-
 function(type = "txt", intLambda = FALSE, ...) {

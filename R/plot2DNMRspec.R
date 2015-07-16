@@ -40,6 +40,8 @@
 #' @seealso \code{\link{makeSpec}}
 #' @keywords utilities
 #' @export
+#' @importFrom graphics plot lines contour
+#' @importFrom stats cor rnorm na.omit
 #' @examples
 #'
 #' ### ethyl 2-ethyl-3-oxobutyrate
