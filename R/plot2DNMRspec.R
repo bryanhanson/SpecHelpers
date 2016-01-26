@@ -30,7 +30,7 @@
 #'
 #' @param type The type of 2D spectrum desired.  One of \code{c("COSY", "TOCSY")}.
 #'
-#' @param levels A vector of levels for the contour plot.  Must be in [0...1].
+#' @param levels A vector of levels for the contour plot.  Must be in (0...1).
 #'
 #' @param \ldots Parameters to be passed to the plotting function.
 #'

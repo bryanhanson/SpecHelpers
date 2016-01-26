@@ -15,17 +15,13 @@
 #'
 #' @param MHz Integer.  The operating frequency of the instrument, in MHz.
 #'
-#' @param ppHz Points per Hz: The number of data points per Hz to use in
+#' @param ppHz Integer, but numeric works too!
+#' Points per Hz: The number of data points per Hz to use in
 #' calculating the spectrum (passed as argument \code{dd} to \code{makeSpec}).
 #' The default (1) works well for 1H NMR spectra.  For 13C NMR spectra, where
 #' the peaks are very narrow, one may need to increase the data density so that
 #' enough points define the peaks (a value of 4 is a good starting point).
-#' Note that this function uses Hz internally so that the \code{x.range}, which
-#' is in ppm, is multiplied by \code{Mhz} before being sent to
-#' \code{\link{makeSpec}}, and once there, \code{makeSpec} will multiply it by
-#' \code{ppHz}.  Thus the total data points used is \code{ppHz * Mhz *
-#' abs(diff(x.range))}.  This approach ensures that peaks are not distorted
-#' when changing \code{x.range} for the same \code{peak.list}.
+#' See Details.
 #'
 #' @param nuclei Character.  One of \code{c("1H", "13C")}. Controls the spacing
 #' of the tick marks and labeling of the peaks.
@@ -41,11 +37,27 @@
 #'
 #' @param plot Logical: Shall a plot be made?
 #'
-#' @param \dots Other parameters to be passed downstream.
+#' @param \dots Other parameters to be passed downstream.  These may affect
+#' the plot.  You can also include \code{noise = some number} to add noise
+#' (passed through to \code{makeSpec}).  In this case, warnings are raised
+#' from the plotting routines, but they can be ignored.
 #'
 #' @return Returns a data frame of the type produced by \code{\link{makeSpec}}.
 #' See there for details.  x values are in Hz.
 #'
+#'
+#' @section Details:
+#' Note that this function uses Hz internally so that the \code{x.range}, which
+#' is in ppm, is multiplied by \code{Mhz} before being sent to
+#' \code{\link{makeSpec}}, and once there, \code{makeSpec} will multiply it by
+#' \code{ppHz}.  Thus the total data points used is \code{floor(ppHz * Mhz *
+#' abs(diff(x.range)))}.  This approach ensures that peaks are not distorted
+#' when changing \code{x.range} for the same \code{peak.list}.
+#'
+#' Note that \code{ppHz} can be numeric as well, due to the use of \code{floor}.
+#' This can be useful: if you wanted your simulated NMR spectrum to be composed
+#' of exactly 16384 data points as real data might be, you can call the function
+#' with \code{ppHz} specified like \code{ppHz = 2^14/(12*500)} and it works! 
 #'
 #' @author Bryan A. Hanson, DePauw University. \email{hanson@@depauw.edu}
 #'
@@ -157,11 +169,6 @@ function(peaks, x.range = c(12, 0), MHz = 300, ppHz = 1,
 	
 	if (pkLabs) { # Figure out where the label will go...
 		
-		# this code extremely slow - removed to speed up CRAN checks
-#		spec2 <- data.frame(group = as.factor(gr), spec[-c(1,2),])
-#		spec2 <- aggregate(.~group, data = spec2, FUN = "max")
-#		y.pos <- apply(spec2[,-1], MARGIN = 1, FUN = max)
-
 		spec2 <- spec[-c(1,2),]
 		grps <- as.factor(gr)
 

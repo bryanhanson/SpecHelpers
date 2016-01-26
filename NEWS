@@ -5,6 +5,12 @@ Utility functions for spectroscopy.  1. Functions to simulate spectra for use in
 Bryan A. Hanson DePauw University, Greencastle Indiana USA
 URL: github.com/bryanhanson/SpecHelpers
 
+Changes in version 0.2.2 2016-01-26
+     + Added function emSpectrum which draws a nice electromagnetic spectrum for teaching purposes.
+     + Added function plotCIEchrom which plots the 1931 CIE chromaticity diagram with various annotations.  This was previously in package photoSpec, whose development is stalled.  Helper functions prepCIEgradient, getWhiteValues and getGamutValues as well as data set CIExyz were brought over as well.
+     + Improved documentation for plotNMRspectra.
+     + Changed some technical details of how data set CIExyz becomes available.
+
 Changes in version 0.1.19 2015-07-16
      + Revised imports for new CRAN namespace policies.
 
