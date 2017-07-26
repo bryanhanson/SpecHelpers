@@ -2,8 +2,8 @@
 % Please edit documentation in R/SpecHelpers-package.R
 \docType{package}
 \name{SpecHelpers-package}
-\alias{SpecHelpers}
 \alias{SpecHelpers-package}
+\alias{SpecHelpers}
 \title{Spectroscopy Related Utilities
 Maintainer: Bryan A. Hanson \email{hanson@depauw.edu}}
 \description{
@@ -18,4 +18,3 @@ LoggerPro and SpectraSuite software.
 Bryan A. Hanson, DePauw University, Greencastle Indiana USA
 }
 \keyword{package}
-

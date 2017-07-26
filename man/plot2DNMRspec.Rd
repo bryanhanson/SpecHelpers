@@ -89,11 +89,10 @@ levels = c(0.85, 0.9, 0.95), type = "TOCSY",
 main = "TOCSY of ethyl 2-ethyl-3-oxobutyrate")
 }
 }
-\author{
-Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
-}
 \seealso{
 \code{\link{makeSpec}}
 }
+\author{
+Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
+}
 \keyword{utilities}
-

@@ -169,7 +169,7 @@ function(peaks, x.range = c(12, 0), MHz = 300, ppHz = 1,
 	
 	if (pkLabs) { # Figure out where the label will go...
 		
-		spec2 <- spec[-c(1,2),]
+		spec2 <- spec[-c(1,2), , drop = FALSE]
 		grps <- as.factor(gr)
 
 		y.pos <- NA_real_

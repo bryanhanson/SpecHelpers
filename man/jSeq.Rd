@@ -26,11 +26,10 @@ tmp <- jSeq(6) # an even number
 tmp
 
 }
-\author{
-Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
-}
 \seealso{
 \code{\link{plotNMRspec}} which calls this function.
 }
+\author{
+Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
+}
 \keyword{utilities}
-

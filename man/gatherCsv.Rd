@@ -23,12 +23,11 @@ contain only wavelength and absorbance data.  The wavelength data column
 must be the same in all the files (as they would be if they came from the
 same instrument with the same settings).
 }
-\author{
-Bryan A. Hanson, DePauw University
-}
 \seealso{
 \code{\link{gatherSpecFiles}} which is the function the user should
 call.
 }
+\author{
+Bryan A. Hanson, DePauw University
+}
 \keyword{utilities}
-

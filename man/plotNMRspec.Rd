@@ -68,6 +68,7 @@ This can be useful: if you wanted your simulated NMR spectrum to be composed
 of exactly 16384 data points as real data might be, you can call the function
 with \code{ppHz} specified like \code{ppHz = 2^14/(12*500)} and it works!
 }
+
 \examples{
 
 ### A simulated 1H NMR spectrum
@@ -120,11 +121,10 @@ res <- plotNMRspec(peaks2, x.range = c(180, 0), MHz = 200,
 # as there are not enough data points to define the peak properly.
 
 }
-\author{
-Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
-}
 \seealso{
 \code{\link{lorentzCurve}}, \code{\link{makeSpec}}
 }
+\author{
+Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
+}
 \keyword{utilities}
-

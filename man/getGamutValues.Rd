@@ -3,6 +3,7 @@
 \name{getGamutValues}
 \alias{getGamutValues}
 \alias{getWhiteValues}
+\alias{getWhiteValues}
 \title{Look up gamut and white point values in the 1931 CIE system}
 \usage{
 getGamutValues(gamut)
@@ -24,11 +25,10 @@ a data frame containing the coordinates of the requested white point.
 These functions provide a simple way of storing white point and
 gamut data for use in drawing CIE chromaticity diagrams.
 }
-\author{
-Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
-}
 \seealso{
 \code{\link{plotCIEchrom}} for examples of this function in use.
 }
+\author{
+Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
+}
 \keyword{utilities}
-

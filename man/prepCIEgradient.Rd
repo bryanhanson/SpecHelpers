@@ -24,11 +24,10 @@ An array containing the data needed to draw the gradient.
 \description{
 This function creates a gradient to fill the CIE chromaticity diagram.
 }
-\author{
-Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
-}
 \seealso{
 \code{\link{plotCIEchrom}} for examples of this function in use.
 }
+\author{
+Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
+}
 \keyword{utilities}
-

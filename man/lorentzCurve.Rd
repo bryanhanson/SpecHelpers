@@ -36,14 +36,13 @@ points(x = x, y = rep(y, length(x)), col = "blue", type = "l")
 text(x = 42, y = y + 0.005, labels = c("gamma"), col = "blue", srt = 90)
 
 }
-\author{
-Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
-}
 \seealso{
 \code{\link{gaussCurve}}, \code{\link{makeSpec}},
 \code{\link{plotNMRspec}}
 and \code{\link{plot2DNMRspec}} for drawing NMR spectra.
 }
+\author{
+Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
+}
 \keyword{distributions}
 \keyword{utilities}
-

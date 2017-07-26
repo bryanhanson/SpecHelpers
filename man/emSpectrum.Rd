@@ -30,6 +30,7 @@ with the width set to 11" or so.
 
 Obviously not to scale, but hopefully aesthetically pleasing!
 }
+
 \examples{
 dev.new(width = 10.5, height = 3)
 emSpectrum()
@@ -40,4 +41,3 @@ dev.off()
 Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
 }
 \keyword{utilities}
-

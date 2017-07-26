@@ -27,7 +27,7 @@
 #' @keywords utilities
 #' @export
 #' @importFrom stats rbinom
-#' @importFrom graphics segments plot
+#' @importFrom graphics segments plot abline
 #' @examples
 #' 
 #' ms <- qMS(f = "C5H8BrCl", xlim = c(150, 200), main = "Parent Ion of C5H8BrCl")
@@ -92,8 +92,8 @@ qMS <- function(f = NULL, xlab = "m/z",
 	Mi <- round(Mi*100/max(Mi))
 	MS <- data.frame(mass = M, rel.int = Mi, row.names = rn)
 		
-	plot(MS$mass, MS$rel.int, type = "n", xlab = xlab, ylab = ylab, main = main, ...)
-	segments(x0 = MS$mass, y0 = 0, x1 = MS$mass, y1 = MS$rel.int, lwd = 4, ...)
+	plot(MS$mass, MS$rel.int, type = "h", xlab = xlab, ylab = ylab, main = main, lwd = 4, ylim = c(0, 100), ...)
+	abline(h = 0)
 		
 	return(MS)
 	}

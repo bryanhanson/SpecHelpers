@@ -88,13 +88,12 @@ ex2 <- makeSpec(spec, x.range = c(5, 0), plot = TRUE, curves = FALSE,
 dd = 100, main = "Simulated 1H NMR of an Ethyl Group")
 
 }
-\author{
-Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
-}
 \seealso{
 \code{\link{gaussCurve}}, \code{\link{lorentzCurve}},
 \code{\link{plotNMRspec}} and \code{\link{plot2DNMRspec}}, the preferred
 interfaces for drawing NMR spectra.
 }
+\author{
+Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
+}
 \keyword{utilities}
-

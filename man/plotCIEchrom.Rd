@@ -53,6 +53,7 @@ The appearance of the color gradient will vary with the
 device, surface and incident light used to view it and is not likely correct
 anywhere.  \strong{The appearance varies strongly with exposure}.
 }
+
 \examples{
 require("grid")
 plotCIEchrom() # no gradient
@@ -67,13 +68,12 @@ plotCIEchrom(gradient = "sl", ex = 1.4)
 plotCIEchrom(gradient = getGamutValues("SWOP"), opts = c("D65", "SWOP", "sRGB"))
 }
 }
-\author{
-Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
-}
 \references{
 For \code{opts = "Munsell"}
 the Munsell designation by wavelength are taken from Romney & Indow
 \url{pnas.org/cgi/doi/10.1073/pnas.162368999}
 }
+\author{
+Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
+}
 \keyword{hplot}
-

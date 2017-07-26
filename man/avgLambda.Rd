@@ -17,12 +17,11 @@ THAT ALL THE csv FILES IN THE CURRENT DIRECTORY ARE PROCESSED AND REPLACED
 WITH THE MODIFIED FILEs.  You should use this function on a copy of the
 directory.
 }
-\author{
-Bryan A. Hanson, DePauw University
-}
 \seealso{
 \code{\link{gatherSpecFiles}} which is the function the user should
 call.
 }
+\author{
+Bryan A. Hanson, DePauw University
+}
 \keyword{utilities}
-

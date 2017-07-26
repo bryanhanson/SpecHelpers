@@ -31,11 +31,10 @@ are also known as xyY or XYZ values.
 \examples{
 data(CIExyz)
 }
-\author{
-Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
-}
 \seealso{
 \code{\link{plotCIEchrom}} for examples of this data in use.
 }
+\author{
+Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
+}
 \keyword{data}
-

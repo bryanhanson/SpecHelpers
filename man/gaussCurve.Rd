@@ -41,12 +41,11 @@ myy2 <- gaussCurve(x = myx, area = 1, mu = 40, sigma = 1.5, tail = 0.1)
 plot(myx, myy2, type = "l", main = "Gaussian Curve with Tailing")
 
 }
-\author{
-Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
-}
 \seealso{
 \code{\link{lorentzCurve}}, \code{\link{makeSpec}} which uses this
 function to make either spectra or chromatograms.
 }
+\author{
+Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}
+}
 \keyword{utilities}
-
