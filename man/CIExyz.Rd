@@ -4,14 +4,16 @@
 \name{CIExyz}
 \alias{CIExyz}
 \title{Spectral Locus for the 1931 CIE chromaticity diagram}
-\format{A data frame with 4400 observations each with the
+\format{
+A data frame with 4400 observations each with the
 following 4 variables:
 \describe{
   \item{wavelength}{wavelength in nm}
   \item{x}{x values}
   \item{y}{y values}
   \item{z}{z values}
-}}
+}
+}
 \source{
 Color Vision Research Lab.  \url{cvrl.ioo.ucl.ac.uk/index.htm}
 Go to this URL, then choose 'NEW CIE XYZ...' In the new page that opens,

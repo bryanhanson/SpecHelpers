@@ -4,8 +4,14 @@
 \alias{plotCIEchrom}
 \title{Draw the 1931 CIE chromaticity diagram}
 \usage{
-plotCIEchrom(gradient = NULL, colSpace = "sRGB", ex = 1, opts = c("D65",
-  "specLocus", "purples"), title = NULL, ...)
+plotCIEchrom(
+  gradient = NULL,
+  colSpace = "sRGB",
+  ex = 1,
+  opts = c("D65", "specLocus", "purples"),
+  title = NULL,
+  ...
+)
 }
 \arguments{
 \item{gradient}{Character: either \code{"sl"}, \code{NULL}, or a

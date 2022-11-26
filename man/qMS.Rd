@@ -4,8 +4,7 @@
 \alias{qMS}
 \title{Draw a Simple Mass Spectrum Showing the Parent Ion}
 \usage{
-qMS(f = NULL, xlab = "m/z", ylab = "intensity", main = "Mass Spectrum",
-  ...)
+qMS(f = NULL, xlab = "m/z", ylab = "intensity", main = "Mass Spectrum", ...)
 }
 \arguments{
 \item{f}{A character string giving the molecular formula of the molecule of

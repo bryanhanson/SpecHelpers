@@ -4,8 +4,16 @@
 \alias{plot2DNMRspec}
 \title{Draw a 2D NMR Spectrum}
 \usage{
-plot2DNMRspec(peaks, x.range = c(0, 12), MHz = 300, ppHz = 1,
-  type = "COSY", M = NULL, levels = seq(0.5, 1, by = 0.1), ...)
+plot2DNMRspec(
+  peaks,
+  x.range = c(0, 12),
+  MHz = 300,
+  ppHz = 1,
+  type = "COSY",
+  M = NULL,
+  levels = seq(0.5, 1, by = 0.1),
+  ...
+)
 }
 \arguments{
 \item{peaks}{A data frame with the following columns: delta, mult

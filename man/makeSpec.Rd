@@ -4,8 +4,16 @@
 \alias{makeSpec}
 \title{Draw a Chromatogram or Spectrum}
 \usage{
-makeSpec(peak.list, x.range, plot = TRUE, curves = FALSE, type = "gauss",
-  noise = 0, dd = 1, ...)
+makeSpec(
+  peak.list,
+  x.range,
+  plot = TRUE,
+  curves = FALSE,
+  type = "gauss",
+  noise = 0,
+  dd = 1,
+  ...
+)
 }
 \arguments{
 \item{peak.list}{For a Gaussian curve, a data frame with the following

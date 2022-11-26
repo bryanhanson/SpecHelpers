@@ -4,8 +4,17 @@
 \alias{plotNMRspec}
 \title{Create and Plot an NMR Spectrum}
 \usage{
-plotNMRspec(peaks, x.range = c(12, 0), MHz = 300, ppHz = 1,
-  nuclei = "1H", pkLabs = TRUE, lab.pos = NULL, plot = TRUE, ...)
+plotNMRspec(
+  peaks,
+  x.range = c(12, 0),
+  MHz = 300,
+  ppHz = 1,
+  nuclei = "1H",
+  pkLabs = TRUE,
+  lab.pos = NULL,
+  plot = TRUE,
+  ...
+)
 }
 \arguments{
 \item{peaks}{A data frame with the following columns: delta, mult

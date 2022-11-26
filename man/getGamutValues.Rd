@@ -3,7 +3,6 @@
 \name{getGamutValues}
 \alias{getGamutValues}
 \alias{getWhiteValues}
-\alias{getWhiteValues}
 \title{Look up gamut and white point values in the 1931 CIE system}
 \usage{
 getGamutValues(gamut)
