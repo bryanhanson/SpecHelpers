@@ -14,6 +14,14 @@ Utility functions for spectroscopy.  1. Functions to simulate spectra for
 use in teaching or testing.  2.  Functions to process files created by
 LoggerPro and SpectraSuite software.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/bryanhanson/SpecHelpers}
+  \item Report bugs at \url{https://github.com/bryanhanson/SpecHelpers/issues}
+}
+
+}
 \author{
 Bryan A. Hanson, DePauw University, Greencastle Indiana USA
 }

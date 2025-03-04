@@ -1,8 +1,8 @@
 Package: SpecHelpers
 Type: Package
 Title: Spectroscopy Related Utilities
-Version: 0.2.13
-Date: 2022-11-26
+Version: 0.3.0
+Date: 2025-03-04
 Author: Bryan A. Hanson DePauw University, Greencastle Indiana USA
 Maintainer: Bryan A. Hanson <hanson@depauw.edu>
 Description: Utility functions for spectroscopy. 1. Functions to simulate
@@ -22,4 +22,4 @@ Encoding: UTF-8
 BugReports: https://github.com/bryanhanson/SpecHelpers/issues
 Depends:
     R (>= 3.0)
-RoxygenNote: 7.2.2
+RoxygenNote: 7.3.2
