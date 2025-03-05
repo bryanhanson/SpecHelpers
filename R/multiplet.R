@@ -1,9 +1,14 @@
 #'
 #' Compute & Possibly Draw an NMR Multiplet with Optional Annotations
 #'
+#' Serves as a teaching and self-study tool to understand complex NMR multiplets.
+#' Inspired by the Valiulin book (see the reference).  One can draw a multiplet,
+#' and optionally draw the splitting tree along with annotations of the J values
+#' and guides connecting the tree to the peak maxima.
+#'
 #' @param J Numeric. A vector giving the coupling constants.
-#' @param pw Numeric.  The value of the peak width at half-height.  Passed to [makeSpec()],
-#'        where it is the `gamma` argument.
+#' @param pw Numeric.  Half the peak width at half-maximum (HWHM).  Passed to [makeSpec()],
+#'        and then [lorentzCurve()] where it is the `gamma` argument.
 #' @param plot Logical. Shall the multiplet be drawn?
 #' @param plotJtree Logical. Shall the Jtree be drawn? `plot` must also be TRUE in this case, 
 #'        and is set automatically if needed.
@@ -17,7 +22,7 @@
 #'
 #' @author Bryan A. Hanson, DePauw University. \email{hanson@@depauw.edu}
 #'
-#' @reference Roman A. Valiulin *NMR Multiplet Interpretation*, 2nd Edition, de Gruyter, 2025.
+#' @references Roman A. Valiulin *NMR Multiplet Interpretation*, 2nd Edition, de Gruyter, 2025.
 #'
 #' @keywords utilities
 #' @export

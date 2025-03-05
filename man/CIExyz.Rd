@@ -8,10 +8,10 @@
 A data frame with 4400 observations each with the
 following 4 variables:
 \describe{
-  \item{wavelength}{wavelength in nm}
-  \item{x}{x values}
-  \item{y}{y values}
-  \item{z}{z values}
+\item{wavelength}{wavelength in nm}
+\item{x}{x values}
+\item{y}{y values}
+\item{z}{z values}
 }
 }
 \source{
