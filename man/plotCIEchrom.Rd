@@ -77,7 +77,7 @@ plotCIEchrom(gradient = getGamutValues("SWOP"), opts = c("D65", "SWOP", "sRGB"))
 \references{
 For \code{opts = "Munsell"}
 the Munsell designation by wavelength are taken from Romney & Indow
-\url{pnas.org/cgi/doi/10.1073/pnas.162368999}
+\url{https://pnas.org/cgi/doi/10.1073/pnas.162368999}
 }
 \author{
 Bryan A. Hanson, DePauw University. \email{hanson@depauw.edu}

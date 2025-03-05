@@ -42,7 +42,7 @@
 ##'
 ##' @references For \code{opts = "Munsell"}
 ##' the Munsell designation by wavelength are taken from Romney & Indow
-##' \url{pnas.org/cgi/doi/10.1073/pnas.162368999}
+##' \url{https://pnas.org/cgi/doi/10.1073/pnas.162368999}
 ##'
 ##' @section Warning:
 ##' The appearance of the color gradient will vary with the
