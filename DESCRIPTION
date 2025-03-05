@@ -3,8 +3,11 @@ Type: Package
 Title: Spectroscopy Related Utilities
 Version: 0.3.0
 Date: 2025-03-05
-Author: Bryan A. Hanson DePauw University, Greencastle Indiana USA
-Maintainer: Bryan A. Hanson <hanson@depauw.edu>
+Authors@R: c(
+    person("Bryan A.", "Hanson",
+      role = c("aut", "cre"), email =
+      "hanson@depauw.edu",
+      comment = c(ORCID = "0000-0003-3536-8246")))
 Description: Utility functions for spectroscopy. 1. Functions to simulate
     spectra for use in teaching or testing. 2. Functions to process files created by
     'LoggerPro' and 'SpectraSuite' software.
