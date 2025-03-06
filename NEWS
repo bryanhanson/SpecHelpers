@@ -5,7 +5,7 @@ Utility functions for spectroscopy.  1. Functions to simulate spectra for use in
 Bryan A. Hanson DePauw University, Greencastle Indiana USA
 URL: github.com/bryanhanson/SpecHelpers
 
-Changes in version 0.3.0 2025-03-05
+Changes in version 0.3.1 2025-03-06
      + Change default branch from master to main and delete master on Github.
      + Update package infrastructure.
      + Added function multiplet.

@@ -15,7 +15,8 @@ following 4 variables:
 }
 }
 \source{
-Color Vision Research Lab.  \url{https://cvrl.ioo.ucl.ac.uk/index.htm}
+Color Vision Research Lab.  See \verb{https://cvrl.ioo.ucl.ac.uk/index.htm}
+(Link can be very slow).
 Go to this URL, then choose 'NEW CIE XYZ...' In the new page that opens,
 go to 'New physiologically-relevant CIE x,y chromaticity coordinates
 (proposed)' and get the 2-deg coordinates at 1.0 nm resolution

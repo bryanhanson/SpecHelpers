@@ -1,8 +1,8 @@
 Package: SpecHelpers
 Type: Package
 Title: Spectroscopy Related Utilities
-Version: 0.3.0
-Date: 2025-03-05
+Version: 0.3.1
+Date: 2025-03-06
 Authors@R: c(
     person("Bryan A.", "Hanson",
       role = c("aut", "cre"), email =
